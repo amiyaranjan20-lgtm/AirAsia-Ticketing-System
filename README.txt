@@ -446,6 +446,216 @@ Before using the application, populate the database by running:
 
 ```bash
 python import_sample_data.py
+```
+
+This command will:
+
+- Reset the existing database
+- Recreate all required database tables
+- Import sample records from the CSV files
+
+### Step 2: Start the Application
+
+Run the main program:
+
+```bash
+python airasia_project.py
+```
+
+This starts the interactive menu for the AirAsia Ticketing System.
+
+### Step 3: Import CSV Data from the Main Menu
+
+When the application starts, select:
+
+```text
+12 - Import Sample CSV Data
+```
+
+This option loads:
+
+- Airports
+- Aircraft
+- Employees
+- Customers
+- Flights
+
+After the CSV files are imported successfully, all CRUD, booking, and reporting features can be used.
+
+---
+
+## 14. Interactive Menu Walkthrough
+
+The system uses a menu-driven interface in which each option performs a specific operation.
+
+```text
+1  - Airport Management
+2  - Aircraft Management
+3  - Employee Management
+4  - Customer Management
+5  - Flight Management
+6  - Ticket Management
+7  - Flight Sales Report
+8  - Employee Flight Report
+9  - Passenger Manifest
+10 - Flight Crew Report
+11 - Reset Database
+12 - Import Sample CSV Data
+0  - Exit System
+```
+
+---
+
+## 15. Using CRUD Operations
+
+After importing the CSV data, users can perform CRUD operations for the major airline entities.
+
+Each management section provides options to:
+
+- View records
+- Search records
+- Add new records
+- Update existing records
+- Delete records
+
+### Airport Management
+
+Manage airport information such as airport code, city, and country.
+
+### Aircraft Management
+
+Manage aircraft types and seating capacities.
+
+### Employee Management
+
+Manage staff records, including pilots, cabin crew, mechanics, and ground staff.
+
+### Customer Management
+
+Manage customer profiles used for ticket booking.
+
+### Flight Management
+
+Create and manage flight schedules between airports.
+
+---
+
+## 16. How to Search for Flights
+
+1. From the main menu, select:
+
+```text
+5 - Flight Management
+```
+
+2. Choose the option to search for flights.
+
+3. Enter the required information:
+
+- Departure airport
+- Destination airport
+- Optional departure date
+
+4. The system displays matching flights with:
+
+- Flight ID
+- Departure date
+- Departure time
+- Origin airport
+- Destination airport
+- Aircraft type
+- Duration
+
+---
+
+## 17. How to Book a Flight Ticket
+
+1. Return to the main menu.
+
+2. Select:
+
+```text
+6 - Ticket Management
+```
+
+3. Choose:
+
+```text
+Purchase Ticket
+```
+
+4. Enter the following information:
+
+- Customer ID
+- Flight ID
+- Ticket cost
+
+5. The system automatically checks:
+
+- Whether the flight exists
+- Whether seats are available
+- Whether the customer already has a ticket for the flight
+
+6. If all validations pass, the ticket is stored in the database and the following confirmation appears:
+
+```text
+Ticket purchased successfully
+```
+
+---
+
+## 18. Report Features
+
+The system provides several reports for analyzing airline operations.
+
+### 18.1 Flight Sales Report
+
+Shows the number of tickets sold and the total revenue for each flight.
+
+### 18.2 Employee Flight Report
+
+Displays employees and the number of flights to which they are assigned.
+
+### 18.3 Passenger Manifest
+
+Lists all passengers booked on a selected flight.
+
+### 18.4 Flight Crew Report
+
+Shows all crew members assigned to a specific flight.
+
+---
+
+## 19. Notes
+
+- Dates are stored in `YYYY-MM-DD` format.
+- Times are stored in `HH:MM` format.
+- The system prevents duplicate bookings for the same customer and flight.
+- Aircraft capacity is checked before a ticket purchase.
+- Crew members are automatically assigned when flights are created.
+
+---
+
+## 20. Future Improvements
+
+Possible future enhancements include:
+
+- A graphical or web-based interface
+- User authentication and role-based access
+- Payment processing
+- A loyalty and rewards program
+- Connecting-flight support
+- Advanced flight-schedule validation
+- Automated booking-confirmation emails
+- Dashboard-style reporting
+- Cloud database deployment
+
+---
+
+## 21. Conclusion
+
+The AirAsia Ticketing System demonstrates how Python and SQLite can be combined to build a practical airline management application. The project integrates relational database design, CRUD operations, CSV data import, booking validation, dynamic pricing, automated crew allocation, reporting, and error handling within one structured command-line system.
+
 
 
 
